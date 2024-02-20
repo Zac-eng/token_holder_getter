@@ -1,5 +1,6 @@
 const abi = require("./abi.json");
 const { Web3 } = require("web3");
+require("dotenv").config();
 const zkatanaProvider = process.env.RPC_ADDRESS;
 const nftContractAddress = process.env.CONTRACT_ADDRESS;
 var web3 = new Web3(new Web3.providers.HttpProvider(zkatanaProvider));
