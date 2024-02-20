@@ -1,7 +1,7 @@
 const abi = require("./abi.json");
 const { Web3 } = require("web3");
-const zkatanaProvider = "https://rpc.startale.com/zkatana";
-const nftContractAddress = "0xc4b00D0D39f2ed308f928b5006Ea68c215C53F46";
+const zkatanaProvider = process.env.RPC_ADDRESS;
+const nftContractAddress = process.env.CONTRACT_ADDRESS;
 var web3 = new Web3(new Web3.providers.HttpProvider(zkatanaProvider));
 const contract = new web3.eth.Contract(abi, nftContractAddress);
 
